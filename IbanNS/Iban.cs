@@ -12,12 +12,28 @@ namespace IbanNS
 
 	public class Iban
     {
-		protected string calcularIban(string ccc)
+		public string IBN { get; set; }
+
+		public bool EsIbanValido(string IBN)
+		{
+			return IBN == CalcularIBAN(IBN.Substring(4));
+		}
+
+		public int GetLength()
+		{
+			return IBN.Length;
+		}
+
+		protected string CalcularIBAN(string cc)
 		{
 			if (!ComprobarLongitudCC(ref cc))
+			{
 				throw new LongitudIncorrecta();
+			}
 			if (!ComprobarPatronIban(cc))
+			{
 				throw new ParametrosIncorrectos();
+			}
 
 			// ES00 España
 			string ES = cc + "142800";
@@ -30,14 +46,18 @@ namespace IbanNS
 			string resultado = partesCC[0];
 
 			CalcularModulo(partesCC, ref iresultado, ref resultado);
+
 			// Le restamos el resultado a 98
 			int iRestoIban = 98 - int.Parse(resultado);
 			string restoIban = iRestoIban.ToString();
 			if (restoIban.Length == 1)
+			{
 				restoIban = "0" + restoIban;
+			}
 
-			return "ES" + restoIban + ccc;
+			return "ES" + restoIban + cc;
 		}
+
 		private void CalcularModulo(string[] partesCC, ref int iresultado, ref string resultado)
 		{
 			for (int i = 0; i < partesCC.Length - 1; i++)
