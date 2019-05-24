@@ -37,4 +37,11 @@ namespace IbanNS.Test
 		{
 			Assert.IsTrue(_iban.EsIbanValido(V));
 		}
+		[Test]
+		public void ComprobarIbanEspañaCorrecto()
+		{
+			_iban.IBN = V;
+
+			Assert.AreEqual("ES", _iban.IBN.Substring(0, 2));
+		}
 	}
