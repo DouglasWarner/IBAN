@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbanNS", "IbanNS\IbanNS.csproj", "{3DAC3B36-7355-46E4-A11A-384BBDC2D4E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IbanNS.Test", "IbanNS.Test\IbanNS.Test.csproj", "{135E6B85-03D8-44E9-8C55-251DAC3317D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DAC3B36-7355-46E4-A11A-384BBDC2D4E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DAC3B36-7355-46E4-A11A-384BBDC2D4E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DAC3B36-7355-46E4-A11A-384BBDC2D4E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DAC3B36-7355-46E4-A11A-384BBDC2D4E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{135E6B85-03D8-44E9-8C55-251DAC3317D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{135E6B85-03D8-44E9-8C55-251DAC3317D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{135E6B85-03D8-44E9-8C55-251DAC3317D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{135E6B85-03D8-44E9-8C55-251DAC3317D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9E4FA19-3C07-4F4A-A2A9-BDA1163AA9D4}
+	EndGlobalSection
+EndGlobal
