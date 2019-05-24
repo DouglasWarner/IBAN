@@ -27,4 +27,9 @@ namespace IbanNS.Test
 
 			Assert.AreEqual(LongitudMax, _iban.GetLength());
 		}
+		[Test]
+		public void ValorAntesDePasarIban()
+		{
+			Assert.AreEqual(null, _iban.IBN);
+		}
 	}
