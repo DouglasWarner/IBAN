@@ -57,4 +57,17 @@ namespace IbanNS.Test
 				// Funciona
 			}
 		}
+		[Test]
+		public void ParametrosIncorrectos()
+		{
+			try
+			{
+				_iban.EsIbanValido("ESAH51328745236541258525");
+				Assert.Fail("Falla porque no se paso un iban");
+			}
+			catch (ParametrosIncorrectos)
+			{
+				// Funciona
+			}
+		}
 	}
