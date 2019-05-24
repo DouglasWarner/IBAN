@@ -44,4 +44,17 @@ namespace IbanNS.Test
 
 			Assert.AreEqual("ES", _iban.IBN.Substring(0, 2));
 		}
+		[Test]
+		public void LongitudIncorrecta()
+		{
+			try
+			{
+				_iban.EsIbanValido("ES710030203353091234567895");
+				Assert.Fail("Falla porque supera la longitud permitida");
+			}
+			catch (LongitudIncorrecta)
+			{
+				// Funciona
+			}
+		}
 	}
