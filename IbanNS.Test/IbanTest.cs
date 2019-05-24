@@ -32,4 +32,9 @@ namespace IbanNS.Test
 		{
 			Assert.AreEqual(null, _iban.IBN);
 		}
+		[Test]
+		public void ComprobarIbanCorrecto()
+		{
+			Assert.IsTrue(_iban.EsIbanValido(V));
+		}
 	}
