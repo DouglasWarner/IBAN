@@ -26,13 +26,10 @@ namespace IbanNS
 			string[] partesCC = new string[5];
 			TrocearCC(ES, ref partesCC);
 
-			int iResultado = int.Parse(partesCCC[0]) % 97;
-			string resultado = iResultado.ToString();
-			for (int i = 0; i & lt; partesCCC.Length - 1; i++)
-{
-				miResultado = int.Parse(resultado + partesCCC[i + 1]) % 97;
-				resultado = iResultado.ToString();
-			}
+			int iresultado = 0;
+			string resultado = partesCC[0];
+
+			CalcularModulo(partesCC, ref iresultado, ref resultado);
 			// Le restamos el resultado a 98
 			int iRestoIban = 98 - int.Parse(resultado);
 			string restoIban = iRestoIban.ToString();
@@ -40,6 +37,14 @@ namespace IbanNS
 				restoIban = "0" + restoIban;
 
 			return "ES" + restoIban + ccc;
+		}
+		private void CalcularModulo(string[] partesCC, ref int iresultado, ref string resultado)
+		{
+			for (int i = 0; i < partesCC.Length - 1; i++)
+			{
+				iresultado = int.Parse(resultado + partesCC[i + 1]) % 97;
+				resultado = iresultado.ToString();
+			}
 		}
 		private void TrocearCC(string cc, ref string[] partesCC)
 		{
